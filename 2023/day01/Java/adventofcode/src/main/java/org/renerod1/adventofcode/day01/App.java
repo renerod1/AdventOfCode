@@ -1,4 +1,4 @@
-package org.renerod1.adventofcode;
+package org.renerod1.adventofcode.day01;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
