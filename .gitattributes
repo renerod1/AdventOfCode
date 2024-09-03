@@ -24,9 +24,3 @@
 *.gitattributes linguist-language=gitattributes
 *.gitattributes linguist-detectable=true
 *.gitattributes linguist-documentation=false
-
-#
-# SQL sources
-#
-*.sql           linguist-detectable=true
-*.sql           linguist-language=sql
