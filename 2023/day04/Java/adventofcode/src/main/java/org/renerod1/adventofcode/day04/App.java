@@ -123,6 +123,6 @@ public class App {
         // System.out.print(", winCount: ");
         // System.out.println(winCount);
 
-        return winCount > 2 ? Math.pow(2,--winCount)  : winCount;
+        return winCount > 2 ? Math.pow(2, --winCount) : winCount;
     }
 }

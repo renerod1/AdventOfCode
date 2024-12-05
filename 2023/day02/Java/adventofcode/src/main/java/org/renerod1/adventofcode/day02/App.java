@@ -69,7 +69,7 @@ public class App {
         System.out.print(", Lines read: ");
         System.out.println(j);
     }
-    
+
     private static List<String> readFile(String file) {
         List<String> lines = Collections.emptyList();
         try {
@@ -159,7 +159,7 @@ public class App {
             return 0;
         }
     }
-    
+
     private static Integer getGamePower(String line, int counter) {
         String game = "";
         String[] gameMoves;
