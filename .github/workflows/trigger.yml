@@ -16,7 +16,7 @@ jobs:
         run: |
           curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" \
           -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/renerod1/renerod1/actions/workflows/<workflow-file>.yml/dispatches \
+          https://api.github.com/repos/renerod1/renerod1/actions/workflows/actions.yml/dispatches \
           -d '{
               "ref": "main",
               "inputs": {
