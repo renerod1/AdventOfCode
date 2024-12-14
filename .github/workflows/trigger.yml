@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  actions: write
+
 jobs:
   notify:
     runs-on: ubuntu-latest
@@ -12,7 +15,7 @@ jobs:
     steps:
       - name: Send Trigger to Profile Repo
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" \
           -H "Accept: application/vnd.github.v3+json" \
