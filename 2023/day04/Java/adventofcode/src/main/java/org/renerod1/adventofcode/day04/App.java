@@ -1,7 +1,6 @@
 package org.renerod1.adventofcode.day04;
 
 import java.io.IOException;
-import java.net.CacheRequest;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -23,7 +22,8 @@ public class App {
      * Part 1
      */
     public static void part1() {
-        // List<String> list = readFile("2023\\day04\\Java\\adventofcode\\src\\data\\sample_input.txt");
+        // List<String> list =
+        // readFile("2023\\day04\\Java\\adventofcode\\src\\data\\sample_input.txt");
         List<String> list = readFile("2023\\day04\\Java\\adventofcode\\src\\data\\input.txt");
 
         Iterator<String> itr = list.iterator();
@@ -81,9 +81,9 @@ public class App {
         // System.out.print(", gameCard: ");
         // System.out.print(gameCard);
         // System.out.print(", gameNumbers: ");
-        // System.out.print(gameNumbers.replace("  ", " ").trim().split(" ").length);
+        // System.out.print(gameNumbers.replace(" ", " ").trim().split(" ").length);
         // System.out.print(", gameWinners: ");
-        // System.out.println(gameWinners.replace("  ", " ").trim().split(" ").length);
+        // System.out.println(gameWinners.replace(" ", " ").trim().split(" ").length);
 
         gameNumbers = gameNumbers.replace("  ", " ").trim();
         gameWinners = gameWinners.replace("  ", " ").trim();

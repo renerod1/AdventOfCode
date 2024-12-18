@@ -22,7 +22,8 @@ public class App {
      * Part 1
      */
     public static void part1() {
-        // List<String> list = readFile("2023\\day02\\Java\\adventofcode\\src\\data\\sample_input.txt");
+        // List<String> list =
+        // readFile("2023\\day02\\Java\\adventofcode\\src\\data\\sample_input.txt");
         List<String> list = readFile("2023\\day02\\Java\\adventofcode\\src\\data\\input.txt");
 
         Iterator<String> itr = list.iterator();
@@ -48,7 +49,8 @@ public class App {
      * Part 2
      */
     public static void part2() {
-        // List<String> list = readFile("2023\\day02\\Java\\adventofcode\\src\\data\\sample_input.txt");
+        // List<String> list =
+        // readFile("2023\\day02\\Java\\adventofcode\\src\\data\\sample_input.txt");
         List<String> list = readFile("2023\\day02\\Java\\adventofcode\\src\\data\\input.txt");
 
         Iterator<String> itr = list.iterator();
