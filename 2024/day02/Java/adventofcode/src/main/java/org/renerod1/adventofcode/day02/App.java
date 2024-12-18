@@ -47,7 +47,7 @@ public class App {
     }
 
     /**
-     * Part 1
+     * Part 2
      */
     public static void part2() {
         // List<String> list =
