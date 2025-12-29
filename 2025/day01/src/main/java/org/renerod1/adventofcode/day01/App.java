@@ -1,4 +1,4 @@
-package org.renerod1.adventofcode.year2025.day01;
+package org.renerod1.adventofcode.day01;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -11,20 +11,18 @@ import java.util.List;
 
 /**
  * Advent of Code Day 1
- *
  */
 public class App {
     public static void main(String[] args) {
-        part1();
-        part2();
+        part1("2025\\day01\\src\\main\\resources\\data\\input.txt");
+        part2("2025\\day01\\src\\main\\resources\\data\\input.txt");
     }
 
     /**
      * Part 1
      */
-    public static void part1() {
-        // List<String> list = readFile("2025\\src\\main\\resources\\day01\\data\\sample_input.txt");
-        List<String> list = readFile("2025\\src\\main\\resources\\day01\\data\\input.txt");
+    public static Integer part1(String file) {
+        List<String> list = readFile(file);
 
         Iterator<String> itr = list.iterator();
         Integer password = 0;
@@ -45,14 +43,15 @@ public class App {
         System.out.print(password);
         System.out.print(", Lines read: ");
         System.out.println(j.size());
+
+        return password;
     }
 
     /**
      * Part 2
      */
-    public static void part2() {
-        // List<String> list = readFile("2025\\src\\main\\resources\\day01\\data\\sample_input.txt");
-        List<String> list = readFile("2025\\src\\main\\resources\\day01\\data\\input.txt");
+    public static Integer part2(String file) {
+        List<String> list = readFile(file);
 
         Iterator<String> itr = list.iterator();
         Integer password = 0;
@@ -73,6 +72,8 @@ public class App {
         System.out.print(password);
         System.out.print(", Lines read: ");
         System.out.println(j.size());
+
+        return password;
     }
 
     private static Integer getPassword(ArrayList<String> i, ArrayList<Integer> j, Integer min, Integer max, Integer seed) {
