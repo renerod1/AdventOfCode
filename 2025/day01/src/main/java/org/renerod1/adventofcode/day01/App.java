@@ -11,28 +11,30 @@ import java.util.List;
 
 /**
  * Advent of Code Day 1
+ *
  */
 public class App {
     public static void main(String[] args) {
-        part1("2025\\day01\\src\\main\\resources\\data\\input.txt");
-        part2("2025\\day01\\src\\main\\resources\\data\\input.txt");
+        part1("day01\\resources\\data\\main\\input.txt");
+        part2("day01\\resources\\data\\main\\input.txt");
     }
 
     /**
      * Part 1
+     * 
      */
-    public static Integer part1(String file) {
+    public static int part1(String file) {
         List<String> list = readFile(file);
 
         Iterator<String> itr = list.iterator();
-        Integer password = 0;
+        int password = 0;
         ArrayList<String> i = new ArrayList<>();
         ArrayList<Integer> j = new ArrayList<>();
 
         while (itr.hasNext()) {
             String line = itr.next();
             // System.out.println("Line: " + line);
-            i.add(line.substring(0,1));
+            i.add(line.substring(0, 1));
             j.add(Integer.parseInt(line.substring(1)));
         }
 
@@ -49,19 +51,20 @@ public class App {
 
     /**
      * Part 2
+     * 
      */
-    public static Integer part2(String file) {
+    public static int part2(String file) {
         List<String> list = readFile(file);
 
         Iterator<String> itr = list.iterator();
-        Integer password = 0;
+        int password = 0;
         ArrayList<String> i = new ArrayList<>();
         ArrayList<Integer> j = new ArrayList<>();
 
         while (itr.hasNext()) {
             String line = itr.next();
             // System.out.println("Line: " + line);
-            i.add(line.substring(0,1));
+            i.add(line.substring(0, 1));
             j.add(Integer.parseInt(line.substring(1)));
         }
 
@@ -76,10 +79,9 @@ public class App {
         return password;
     }
 
-    private static Integer getPassword(ArrayList<String> i, ArrayList<Integer> j, Integer min, Integer max, Integer seed) {
-
-        Integer total = 0;
-        Integer value = seed;
+    private static int getPassword(ArrayList<String> i, ArrayList<Integer> j, int min, int max, int seed) {
+        int total = 0;
+        int value = seed;
 
         // System.out.println("The dial starts by pointing at " + value);
         for (int k = 0; k < j.size(); k++) {
@@ -87,22 +89,22 @@ public class App {
             switch (i.get(k)) {
                 case "L":
                     value -= j.get(k);
-                    while (value < min) { 
-                        value += (max+1);
+                    while (value < min) {
+                        value += (max + 1);
                     }
                     break;
                 case "R":
                     value += j.get(k);
-                    while (value > max) { 
-                        value -= (max+1);
+                    while (value > max) {
+                        value -= (max + 1);
                     }
-                    break;            
+                    break;
                 default:
                     break;
-                    
+
             }
             // System.out.print(" to point at " + value);
-            if (value == 0) { 
+            if (value == 0) {
                 total++;
             }
             // System.out.println(" running password " + total);
@@ -111,10 +113,9 @@ public class App {
         return total;
     }
 
-    private static Integer getPassword2(ArrayList<String> i, ArrayList<Integer> j, Integer min, Integer max, Integer seed) {
-
-        Integer total = 0;
-        Integer value = seed;
+    private static int getPassword2(ArrayList<String> i, ArrayList<Integer> j, int min, int max, int seed) {
+        int total = 0;
+        int value = seed;
 
         // System.out.println("The dial starts by pointing at " + value);
         for (int k = 0; k < j.size(); k++) {
@@ -127,7 +128,7 @@ public class App {
                         if (value < min) {
                             value = max;
                         }
-                        if (value == 0) { 
+                        if (value == 0) {
                             total++;
                         }
                     }
@@ -140,15 +141,15 @@ public class App {
                         if (value > max) {
                             value = min;
                         }
-                        if (value == 0) { 
+                        if (value == 0) {
                             total++;
                         }
                     }
                     // System.out.print(", value " + value);
-                    break;            
+                    break;
                 default:
                     break;
-                    
+
             }
             // System.out.println(" running password " + total);
         }
@@ -163,6 +164,7 @@ public class App {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return lines;
     }
 }

@@ -1,4 +1,4 @@
-package org.renerod1.adventofcode.day02;
+package org.renerod1.adventofcode.day04;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +12,7 @@ public class AppTest {
      */
     @Test
     public void part1Test() {
-        assertEquals(1227775554L, App.part1("resources\\data\\test\\sample_input.txt"));
+        assertEquals(13.0, App.part1("resources\\data\\test\\sample_input.txt"),0.0);
     }
 
     /**
@@ -21,6 +21,6 @@ public class AppTest {
      */
     // @Test
     // public void part2Test() {
-    //     assertEquals(4174379265L, App.part2("resources\\data\\test\\sample_input.txt"));
+    // assertEquals(0, App.part2("resources\\data\\test\\sample_input.txt"));
     // }
 }

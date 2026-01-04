@@ -12,15 +12,15 @@ public class AppTest {
      */
     @Test
     public void part1Test() {
-        assertEquals(1227775554L, App.part1("resources\\data\\test\\sample_input.txt"));
+        assertEquals(8, App.part1("resources\\data\\test\\sample_input.txt"));
     }
 
     /**
      * Part 2
      * 
      */
-    // @Test
-    // public void part2Test() {
-    //     assertEquals(4174379265L, App.part2("resources\\data\\test\\sample_input.txt"));
-    // }
+    @Test
+    public void part2Test() {
+        assertEquals(2286, App.part2("resources\\data\\test\\sample_input.txt"));
+    }
 }

@@ -12,7 +12,7 @@ public class AppTest {
      */
     @Test
     public void part1Test() {
-        assertEquals(3, App.part1("resources\\data\\test\\sample_input.txt"));
+        assertEquals(11, App.part1("resources\\data\\test\\sample_input.txt"));
     }
 
     /**
@@ -21,6 +21,6 @@ public class AppTest {
      */
     @Test
     public void part2Test() {
-        assertEquals(6, App.part2("resources\\data\\test\\sample_input.txt"));
+        assertEquals(31, App.part2("resources\\data\\test\\sample_input.txt"));
     }
 }

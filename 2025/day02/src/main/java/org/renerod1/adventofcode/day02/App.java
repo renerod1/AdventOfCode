@@ -4,25 +4,28 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * Advent of Code Day 2
+ *
  */
 public class App {
     public static void main(String[] args) {
-        part1("2025\\day02\\src\\main\\resources\\data\\input.txt");
-        // part2("2025\\day02\\src\\main\\resources\\data\\input.txt");
+        part1("day02\\resources\\data\\main\\input.txt");
     }
 
     /**
      * Part 1
+     * 
      */
-    public static Long part1(String file) {
+    public static long part1(String file) {
         String list = readFile(file).get(0);
 
-        Long invalidTotal = 0L;
+        long invalidTotal = 0L;
         String[] i = {};
         
         // System.out.println("list: " + list);
@@ -41,11 +44,10 @@ public class App {
         return invalidTotal;
     }
 
-    private static Long getInvalid(String i) {
-
-        Long total = 0L;
-        Long min = Long.parseLong(i.split("-")[0]);
-        Long max = Long.parseLong(i.split("-")[1]);
+    private static long getInvalid(String i) {
+        long total = 0L;
+        long min = Long.parseLong(i.split("-")[0]);
+        long max = Long.parseLong(i.split("-")[1]);
         for (long j = min; j <= max; j++) {
             Integer strLength = String.valueOf(j).length();
             String temp1 = String.valueOf(j).substring(0,strLength/2);
@@ -72,6 +74,7 @@ public class App {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return lines;
     }
 }
